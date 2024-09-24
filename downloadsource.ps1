@@ -3,6 +3,6 @@ $src = "https://softwarebuilder.blob.core.windows.net/softwarerepo/Source.zip?sp
 $dest = "c:\temp"
 $fullline = $azcopy + " -copy" + " " + $src + " " + $dest
 write-host $fullline
-#& $fullline
+& $fullline
 
-#expand-archive 'c:\temp\source.zip' c:\
+expand-archive 'c:\temp\source.zip' c:\
