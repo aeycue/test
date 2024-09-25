@@ -1,7 +1,8 @@
 #install apps
 
 #region Set logging 
-$logFile = "c:\ImageBuilder\" + (get-date -format 'yyyyMMdd') + '_softwareinstall.log'
+if (-not(test-path "c:\Source\ImageBuilder\")){mkdir "c:\Source\ImageBuilder\"}
+$logFile = "c:\Source\ImageBuilder\" + (get-date -format 'yyyyMMdd') + '_softwareinstall.log'
 function Write-Log {
     Param($message)
     Write-Output "$(get-date -format 'yyyyMMdd HH:mm:ss') $message" | Out-File -Encoding utf8 $logFile -Append
@@ -29,7 +30,7 @@ $appname = "ForcePoint"
 #region ForcePoint
 try {
     & "C:\Source\Forcepoint_DLP_22.12.5622\Deploy\Install_ForcePoint_DLP.ps1"
-    if (Test-Path "C:\Program Files\Crowdstrike\CSFalconContainer.exe") {
+    if (Test-Path "c:\Program Files\Websense\Websense Endpoint\EndPointClassifier.exe") {
         Write-Log "$($appname) has been installed"
     }
     else {
