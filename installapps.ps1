@@ -6,6 +6,7 @@ $logFile = "c:\Source\ImageBuilder\" + (get-date -format 'yyyyMMdd') + '_softwar
 function Write-Log {
     Param($message)
     Write-Output "$(get-date -format 'yyyyMMdd HH:mm:ss') $message" | Out-File -Encoding utf8 $logFile -Append
+    Write-Host "$(get-date -format 'yyyyMMdd HH:mm:ss') $message"
 }
 #endregion
 
