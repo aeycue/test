@@ -46,3 +46,4 @@ catch {
     write-log "Error installing $($appname): $ErrorMessage"
 }
 #endregion
+exit 0
