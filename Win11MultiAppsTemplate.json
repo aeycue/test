@@ -31,10 +31,12 @@
         }
       },
       "properties": {
-        "buildTimeoutInMinutes": 240,
+        "buildTimeoutInMinutes": 0,
         "vmProfile": {
           "vmSize": "Standard_D2s_v4",
           "osDiskSizeGB": 127
+          "VNet": "vnet-avd-dev-usc-001"
+          "Subnet": "vnet-avd-dev-usc-001/snet-avd-avd-dev-usc-001" 
         },
         "source": {
           "type": "PlatformImage",
