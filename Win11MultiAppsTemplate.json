@@ -65,8 +65,8 @@
           {
             "type": "PowerShell",
             "runElevated": true,
-            "name": "RunPoShInstall",
-            "scriptUri": "<URI to PowerShell Script>"
+            "name": "RunPoShInstall Sleep 60 Sec",
+            "scriptUri": "https://raw.githubusercontent.com/aeycue/test/refs/heads/main/sleep60sec.ps1"
           }
         ],
         "distribute": [
